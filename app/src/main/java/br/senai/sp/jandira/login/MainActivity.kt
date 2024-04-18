@@ -290,41 +290,41 @@ fun GreetingSignUp() {
         )
 
         Card(
-        // criei um card p posicionar onde a imagem ia ficar e poder manipular ELE ao envés da imagem
-           modifier = Modifier
-             .align(Alignment.CenterHorizontally)
-          .size(height = 120.dp, width = 100.dp)
-          .padding(top = 20.dp), shape = CircleShape,
-          border = BorderStroke(2.dp, Color(0xffCF06F0))
-
-        // Preparei ele para receber a imagem
-
-             ) {
-
-       // coloquei a imagem dentro do card
-            Image(
+            // criei um card p posicionar onde a imagem ia ficar e poder manipular ELE ao envés da imagem
             modifier = Modifier
-        // ajustei o tamanho da imagem pra ela n ficar estranha
-             .size(height = 64.dp, width = 100.dp)
-        // pus um offset para alinhar a imagem
-            .offset(y = 20.dp),
-        // comandos pra trazer a imagem do campo
-           painter = painterResource(id = R.drawable.icon),
-              contentDescription = ""
+                .align(Alignment.CenterHorizontally)
+                .size(height = 120.dp, width = 100.dp)
+                .padding(top = 20.dp), shape = CircleShape,
+            border = BorderStroke(2.dp, Color(0xffCF06F0))
+
+            // Preparei ele para receber a imagem
+
+        ) {
+
+            // coloquei a imagem dentro do card
+            Image(
+                modifier = Modifier
+                    // ajustei o tamanho da imagem pra ela n ficar estranha
+                    .size(height = 64.dp, width = 100.dp)
+                    // pus um offset para alinhar a imagem
+                    .offset(y = 20.dp),
+                // comandos pra trazer a imagem do campo
+                painter = painterResource(id = R.drawable.icon),
+                contentDescription = ""
             )
 
         }
 
         // fora do card e da imagem a imagem da camera
-           Image(
-          modifier = Modifier
-        // usei um offset pra posicionar ela
-            .offset(x = 220.dp, y = -25.dp)
-        // defini um tamanho
-           .size(height = 30.dp, width = 30.dp),
-          painter = painterResource(id = R.drawable.camera),
-           contentDescription = ""
-          )
+        Image(
+            modifier = Modifier
+                // usei um offset pra posicionar ela
+                .offset(x = 220.dp, y = -25.dp)
+                // defini um tamanho
+                .size(height = 30.dp, width = 30.dp),
+            painter = painterResource(id = R.drawable.camera),
+            contentDescription = ""
+        )
 
         Column(
             modifier = Modifier
@@ -528,10 +528,14 @@ fun GreetingSignUp() {
             }
 
         }
-
     }
 }
 
+@Preview(showBackground = true, showSystemUi = true)
+@Composable
+fun GreetingHome() {
+
+}
 
 
 
